@@ -1,7 +1,7 @@
 Wart (evolution of a Pimple)
 ============================
 
-\Wart is an ugly and small Dependency Injection Container, grown out of 
+Wart is an ugly and small Dependency Injection Container, grown out of 
 Pimple for PHP 5.3 that consists of just one file and one class (more 
 than 80 lines of code for sure).
 
@@ -22,7 +22,7 @@ Creating a container is a matter of instating the ``Wart`` class
 
 .. code-block:: php
 
-    $container = new \Wart();
+    $container = new \Wart\Wart();
 
 As many other dependency injection containers, Wart is able to manage two
 different kinds of data: *services* and *parameters*.
@@ -116,7 +116,7 @@ start using a service it becomes frozen, and will throw a ``\RuntTimeException``
     });
 
 The first argument is the name of the object, the second is a function that
-can should have 2 parameters: 1) access to the object instance, 2) the container.
+should have 2 parameters: 1) access to the object instance, 2) the container.
 
 Fetching the service creation function
 --------------------------------------
