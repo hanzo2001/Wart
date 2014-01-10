@@ -1,11 +1,11 @@
-Wart
-====
+Wart (evolution of a Pimple)
+============================
 
-Wart is an ugly and small Dependency Injection Container for PHP 5.3
-that consists of just one file and one class (more than 80 lines of code
-for sure).
+\Wart is an ugly and small Dependency Injection Container, grown out of 
+Pimple for PHP 5.3 that consists of just one file and one class (more 
+than 80 lines of code for sure).
 
-`Download it`_, require it in your code, and you're good to go
+Download it?, require it in your code, and you're good to go
 
 .. code-block:: php
 
