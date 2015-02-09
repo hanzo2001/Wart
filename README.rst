@@ -1,7 +1,7 @@
-Wart (evolution of a Pimple)
+``Wart`` (evolution of a Pimple)
 ============================
 
-Wart is an ugly and small Dependency Injection Container, grown out of 
+``Wart`` is an ugly and small Dependency Injection Container, grown out of 
 Pimple for PHP 5.3 that consists of just one file and one class (more 
 than 80 lines of code for sure).
 
@@ -24,13 +24,13 @@ Creating a container is a matter of instantiating the ``Wart`` class
 
     $container = new \Wart\Wart();
 
-As many other dependency injection containers, Wart is able to manage two
+As many other dependency injection containers, ``Wart`` is able to manage two
 different kinds of data: *services* and *parameters*.
 
 Defining Parameters
 -------------------
 
-Defining a parameter is as simple as using the Wart instance as an array. This
+Defining a parameter is as simple as using the ``Wart`` instance as an array. This
 has some caveats but keep on reading (just avoid setting invocable objects in 
 this manner, those have special behaviour)
 
@@ -83,7 +83,7 @@ Using the defined service is also very easy
 Protecting Parameters
 ---------------------
 
-Because Wart sees anonymous functions as service definitions, you need to
+Because ``Wart`` sees anonymous functions as service definitions, you need to
 wrap anonymous functions with the ``protect()`` method to store them as a
 parameter. The magic method ``__invoke`` is what marks objects as possible
 service deifinitions. Objects of class ``\Closure`` implement ``__invoke``
@@ -100,7 +100,7 @@ In some cases you may want to modify a service definition after it has been
 defined. You can use the ``extend()`` method to define additional code to
 be run on your service just after it is created. **BUT REMEMBER:** once you
 start using a service it becomes frozen, and will throw a ``\RuntTimeException``
-**in your face!** (bad Wart, bad!)
+**in your face!** (bad ``Wart``, bad!)
 
 .. code-block:: php
 
@@ -121,7 +121,7 @@ should have 2 parameters: 1) access to the object instance, 2) the container.
 Fetching the service creation function
 --------------------------------------
 
-When you access an object, Wart automatically calls the anonymous function
+When you access an object, ``Wart`` automatically calls the anonymous function
 that you defined, which creates the service object for you. If you want to get
 raw access to this function, you can use the ``raw()`` method.
 
@@ -182,7 +182,7 @@ Using this container from your own is as easy as it can get
 Defining Factory Services
 -------------------------
 
-By default, each time you get a service, Wart returns the **same instance**
+By default, each time you get a service, ``Wart`` returns the **same instance**
 of it. If you want a different instance to be returned for all calls, wrap your
 anonymous function with the ``factory()`` method
 
