@@ -18,7 +18,7 @@ autoloader
 
     require_once '/path/to/Wart/Wart.php';
 
-Creating a container is a matter of instating the ``Wart`` class
+Creating a container is a matter of instantiating the ``Wart`` class
 
 .. code-block:: php
 
